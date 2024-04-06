@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_navigation"
+    app:startDestination="@id/anaSayfaFragment">
+
+    <fragment
+        android:id="@+id/anaSayfaFragment"
+        android:name="com.musaguzel.takirtidergi.view.AnaSayfaFragment"
+        tools:layout="@layout/fragment_ana_sayfa" />
+    <fragment
+        android:id="@+id/araGundemFragment"
+        android:name="com.musaguzel.takirtidergi.view.AraGundemFragment"
+        tools:layout="@layout/fragment_ara_gundem" />
+    <fragment
+        android:id="@+id/dundenDuneFragment"
+        android:name="com.musaguzel.takirtidergi.view.DundenDuneFragment"
+        tools:layout="@layout/fragment_dunden_dune" />
+    <fragment
+        android:id="@+id/yeteneklerinSesiFragment"
+        android:name="com.musaguzel.takirtidergi.view.YeteneklerinSesiFragment"
+        tools:layout="@layout/fragment_yeteneklerin_sesi" />
+</navigation>

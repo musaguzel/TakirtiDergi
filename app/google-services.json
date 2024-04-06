@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1065165651428",
+    "project_id": "takirtiproject",
+    "storage_bucket": "takirtiproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065165651428:android:77e88b7534f18e18d8dbf1",
+        "android_client_info": {
+          "package_name": "com.musaguzel.takirtidergi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1065165651428-80cpfalitvt837o30mc2vrgb7p2dcm41.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0zcBn6HiYDsNXj-EEcuo1shxCQu-aDNU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065165651428-80cpfalitvt837o30mc2vrgb7p2dcm41.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

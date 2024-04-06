@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperereshYetenek"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.YeteneklerinSesiFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/voiceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/perde">
+
+            <VideoView
+                android:id="@+id/songVideoView"
+                android:layout_width="310dp"
+                android:layout_height="290dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.587" />
+
+
+            <TextView
+                android:id="@+id/instagramLabel"
+                android:layout_width="152dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/text_background"
+                android:drawableLeft="@drawable/insta_logo"
+                android:gravity="center_vertical"
+                android:text="MusaGuzel"
+                android:textColor="?attr/text_color"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/youtubeLabel"
+                android:layout_width="152dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="44dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/text_background"
+                android:drawableLeft="@drawable/tube_logo"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text=" MusaGuzel"
+                android:textColor="?attr/text_color"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayoutYetenek"
+                android:layout_width="310dp"
+                android:layout_height="290dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.587">
+
+                <include layout="@layout/shimmer_placeholder_layout" />
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/controllerLayout"
+                android:layout_width="300dp"
+                android:layout_height="67dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/songVideoView"
+                app:layout_editor_absoluteX="75dp"
+                app:layout_editor_absoluteY="520dp">
+
+                <TextView
+                    android:id="@+id/startTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="?attr/text_color" />
+
+                <SeekBar
+                    android:id="@+id/songVideoSeekBar"
+                    android:layout_width="208dp"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@id/startTime" />
+
+                <TextView
+                    android:id="@+id/endTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/songVideoSeekBar"
+                    android:text="00:00"
+                    android:textColor="?attr/text_color" />
+
+                <ImageView
+                    android:id="@+id/replayImageVoice"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/songVideoSeekBar"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@id/playPauseImageVoice"
+                    app:srcCompat="@drawable/replay_5" />
+
+                <ImageView
+                    android:id="@+id/playPauseImageVoice"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/songVideoSeekBar"
+                    android:layout_centerHorizontal="true"
+                    app:srcCompat="@drawable/pause_image" />
+
+                <ImageView
+                    android:id="@+id/forwardImageVoice"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/endTime"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/playPauseImageVoice"
+                    app:srcCompat="@drawable/forward_5" />
+            </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</layout>
